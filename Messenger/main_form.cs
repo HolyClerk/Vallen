@@ -12,7 +12,7 @@ namespace Messenger
 {
     public partial class main_form : Form
     {
-        Point lastCoordinate;
+        int workTime;
         public main_form()
         {
             InitializeComponent();
@@ -23,12 +23,23 @@ namespace Messenger
             Application.Exit();
         }
 
-        private void main_form_MouseDown(object sender, MouseEventArgs e)
+        private void title_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Мы все отправимся в Вальгаллу!");
+        }
+
+        /*
+         * Функции отвечающие за движение окон. Подробно они описаны в log_form.cs
+         */
+
+        Point lastCoordinate;
+
+        private void header_MouseDown(object sender, MouseEventArgs e)
         {
             lastCoordinate = new Point(e.X, e.Y);
         }
 
-        private void main_form_MouseMove(object sender, MouseEventArgs e)
+        private void header_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -37,19 +48,9 @@ namespace Messenger
             }
         }
 
-        private void title_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            MessageBox.Show("Мы все отправимся в Вальгаллу!");
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            timeOfWork.Text = (workTime++).ToString() + " сек.";
         }
     }
 
