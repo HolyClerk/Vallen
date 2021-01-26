@@ -34,9 +34,9 @@
             this.title = new System.Windows.Forms.Label();
             this.header = new System.Windows.Forms.Panel();
             this.titleLower = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.helperButton = new System.Windows.Forms.Button();
+            this.cpButton = new System.Windows.Forms.Button();
+            this.parseButton = new System.Windows.Forms.Button();
             this.cleanUpButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
             this.minimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minimizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minimizeButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.minimizeButton.Location = new System.Drawing.Point(723, 0);
             this.minimizeButton.Name = "minimizeButton";
@@ -76,6 +76,7 @@
             this.minimizeButton.TabIndex = 1;
             this.minimizeButton.Text = "-";
             this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // title
             // 
@@ -116,44 +117,44 @@
             this.titleLower.TabIndex = 4;
             this.titleLower.Text = "Pre-Alpha";
             // 
-            // button1
+            // helperButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(16, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(298, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Помощник";
-            this.button1.UseVisualStyleBackColor = false;
+            this.helperButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.helperButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helperButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helperButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.helperButton.Location = new System.Drawing.Point(16, 181);
+            this.helperButton.Name = "helperButton";
+            this.helperButton.Size = new System.Drawing.Size(298, 41);
+            this.helperButton.TabIndex = 4;
+            this.helperButton.Text = "Помощник";
+            this.helperButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // cpButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(16, 116);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(298, 41);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Диспетчер Задач";
-            this.button2.UseVisualStyleBackColor = false;
+            this.cpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.cpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cpButton.Location = new System.Drawing.Point(16, 116);
+            this.cpButton.Name = "cpButton";
+            this.cpButton.Size = new System.Drawing.Size(298, 41);
+            this.cpButton.TabIndex = 5;
+            this.cpButton.Text = "Диспетчер Задач";
+            this.cpButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // parseButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(16, 56);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(298, 41);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Парсинг";
-            this.button3.UseVisualStyleBackColor = false;
+            this.parseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
+            this.parseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.parseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.parseButton.Location = new System.Drawing.Point(16, 56);
+            this.parseButton.Name = "parseButton";
+            this.parseButton.Size = new System.Drawing.Size(298, 41);
+            this.parseButton.TabIndex = 6;
+            this.parseButton.Text = "Парсинг";
+            this.parseButton.UseVisualStyleBackColor = false;
             // 
             // cleanUpButton
             // 
@@ -167,15 +168,16 @@
             this.cleanUpButton.TabIndex = 7;
             this.cleanUpButton.Text = "Очистка ненужных файлов";
             this.cleanUpButton.UseVisualStyleBackColor = false;
+            this.cleanUpButton.Click += new System.EventHandler(this.cleanUpButton_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.cpButton);
+            this.panel1.Controls.Add(this.helperButton);
             this.panel1.Controls.Add(this.cleanUpButton);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.parseButton);
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(339, 314);
@@ -252,9 +254,9 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Panel header;
         private System.Windows.Forms.Label titleLower;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button helperButton;
+        private System.Windows.Forms.Button cpButton;
+        private System.Windows.Forms.Button parseButton;
         private System.Windows.Forms.Button cleanUpButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

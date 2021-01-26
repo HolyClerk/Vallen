@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Messenger
     public partial class main_form : Form
     {
         int workTime;
+
         public main_form()
         {
             InitializeComponent();
@@ -21,6 +23,11 @@ namespace Messenger
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void title_Click(object sender, EventArgs e)
@@ -51,6 +58,13 @@ namespace Messenger
         private void timer1_Tick(object sender, EventArgs e)
         {
             timeOfWork.Text = (workTime++).ToString() + " сек.";
+        }
+
+        // Очистка файлов
+        private void cleanUpButton_Click(object sender, EventArgs e)
+        {
+            DialogForm1 dialogWindow = new DialogForm1();
+            dialogWindow.Show();
         }
     }
 

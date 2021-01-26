@@ -133,5 +133,10 @@ namespace Messenger
                 Top += e.Y - lastCoordinate.Y;
             }
         }
+
+        private void headerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
